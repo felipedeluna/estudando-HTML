@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Tabelas</h1>
+        <!-- <table> = Estrutura de uma tabela em HTML -->
+        <!-- <tr> = Linha de uma tabela -->
+        <!-- <td> = Célula de uma tabela -->
+        <!-- <th> = Titulo da coluna -->
+        <h2>Pessoas</h2>
+        <table border="1" style="width: 100%;">
+            <!-- <colgroup> e <col> = tags auxiliares de estilização de tabelas  -->
+            <colgroup>
+                <col style="width: 50%; background-color: aliceblue;">
+                <col style="width: 30%; background-color: rgb(213, 176, 255);">
+                <col style="width: 20%; background-color: rgb(244, 161, 255);">
+            </colgroup>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>E-mail</th>
+            </tr>
+            <tr>
+                <td>Fernando</td>
+                <td>27 anos</td>
+                <td>fernando@example.com</td>
+            </tr>
+            <tr>
+                <td>Bruna</td>
+                <td>30 anos</td>
+                <td>bruna@example.com</td>
+            </tr>
+        </table>
+
+        <h2>Tabuada soma 2</h2>
+
+        <table border="1">
+            <tr>
+                <th class="op">Operação</th>
+                <th>Resultado</th>
+            </tr>
+            <tr>
+                <td class="op">1 + 2 =</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="op">2 + 2 =</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td class="op">3 + 2 =</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td class="op">4 + 2 =</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td class="op">5 + 2 =</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td class="op">6 + 2 =</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td class="op">7 + 2 =</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td class="op">8 + 2 =</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td class="op">9 + 2 =</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td class="op">10 + 2 =</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <h2>Times Futebol</h2>
+
+        <!-- <thead> = Define o cabeçalho da tabela -->
+        <!-- <tbody> = Define o corpo da tabela -->
+        <!-- <tfoot> = Define o rodapé da tabela -->
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="4">Classificação times no brasileirão</th>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Pontos</th>
+                    <th>Saldo de Gols</th>
+                    <th>Vitórias</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Corinthians</td>
+                    <td>70</td>
+                    <td>25</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Fluminense</td>
+                    <td>20</td>
+                    <td>9</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Flamengo</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td rowspan="2">10</td>
+                </tr>
+                <tr>
+                    <td>Gremio</td>
+                    <td>23</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        Acesse nosso site
+                        <a
+                            href="https://ge.globo.com/futebol/brasileirao-serie-a/"
+                            target="_blank"
+                        >
+                            Brasileirao
+                        </a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
+1 mes de treinamento tem selecao
+
+Analista de ti 
+Analista Junior é necessário o ensino superior?
+
