@@ -1,0 +1,184 @@
+<!-- - nome completo da pessoa* (max. 200 caracteres);
+- email *
+- senha *
+- uf *
+- cidade *
+- rua *
+- numero *
+- cep *
+- bio *
+- área de atuação (fullstack, cloud, ambos)
+- botão de cadastrar e botão de limpar -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro</title>
+        <style>
+            body{
+                background-color: bisque;
+            }
+            fieldset{
+                background-color: white;
+            }
+            h2{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin: 0 auto; width: max-content">
+            <form action="">
+                <h2 style="text-align: center">Cadastre-se</h2>
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="nome">Nome: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="nome" maxlength="200"required placeholder="Nome completo"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">E-mail: </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" maxlength="200" required placeholder="E-mail"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="senha">Senha: </label>
+                            </td>
+                            <td>
+                                <input type="password" name="senha" id="senha" required placeholder="Senha" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="a_atuacao">Área de atuação: </label>
+                            </td>
+                            <td>
+                                <select name="a_atuacao" id="a_atuacao" required>
+                                    <option selected disabled value="">
+                                        --Selecione uma opcão--
+                                    </option>
+                                    <option value="Front-End">Front-End</option>
+                                    <option value="Back-End">Back-End</option>
+                                    <option value="FullStack">FullStack</option>
+                                    <option value="Cloud">Cloud</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="bio">Bio: </label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <textarea name="bio" id="bio" cols="36" rows="10" required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Informações de Endereço
+                    </legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="uf">Estado:</label>
+                            </td>
+                            <td>
+                                <input list="ufs" name="uf" id="uf" required>
+                                <datalist id="ufs">
+                                    <option value="Acre">
+                                    <option value="Alagoas">
+                                    <option value="Amapá">
+                                    <option value="Amazonas">
+                                    <option value="Bahia">
+                                    <option value="Ceará">
+                                    <option value="Distrito Federal">
+                                    <option value="Espírito Santo">
+                                    <option value="Goiás">
+                                    <option value="Maranhão">
+                                    <option value="Mato Grosso">
+                                    <option value="Mato Groso do Sul">
+                                    <option value="Minas Gerais">
+                                    <option value="Pará">
+                                    <option value="Paraíba">
+                                    <option value="Paraná">
+                                    <option value="Pernambuco">
+                                    <option value="Piauí">
+                                    <option value="Roraima">
+                                    <option value="Rondônia">
+                                    <option value="Rio de Janeiro">
+                                    <option value="Rio Grande do Norte">
+                                    <option value="Rio Grande do Sul">
+                                    <option value="Santa Catarina">
+                                    <option value="São Paulo">
+                                    <option value="Sergipe">
+                                    <option value="Tocantins">
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="cidade">Cidade: </label> 
+                            </td>
+                            <td>
+                                <input type="text" name="cidade" id="cidade" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="cep">Cep: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="cep" id="cep" required pattern="\d{5}-\d{3}" placeholder="Digite com pontuação">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="rua">Rua: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="rua" id="rua" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="numero">Número: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="numero" id="numero" required maxlength="10">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <table>
+                    <tr>
+                        <td>
+                            <button type="submit">Cadastrar</button>
+                        </td>
+                        <td>
+                            <button type="reset">Limpar</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <table>
+                <tr>
+                    <td>
+                        <a href="login.html"><button>LOGAR</button></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
