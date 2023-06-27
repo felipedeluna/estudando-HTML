@@ -2,21 +2,30 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Inputs</title>
 </head>
 <body>
     <h1>Formulários</h1>
     <!-- <form action=""> = Estrutura base de m formulário HTML -->
     <!-- <input type="text"> = Define um campo no formulário -->
     <!-- <button> = Botão  -->
+    <!-- value = Define o valor do campo  -->
     <form>
         <table>
+        <tr>
+            <td>
+                Teste
+            </td>
+            <td>
+                <input type="text" pattern="[0-9]{11}"> <!-- Define um modelo de numero que deve ter min. 4 e no max. 8 digitos -->
+            </td>
+        </tr>
         <tr>
             <td>
                 Nome:
             </td>
             <td>
-                <input type="text"> <br>
+                <input name="nome" type="text" placeholder="Nome completo"> <br> <!-- type="text" define um campo para entrada de texto -->
             </td>
         </tr>
         <tr>
@@ -24,7 +33,7 @@
                 E-mail:
             </td>
             <td>
-                <input type="email"> <br>
+                <input name="email" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="E-mail"> <br> <!-- type="email" define um campo para entrada de email -->
             </td>
         </tr>
         <tr>
@@ -32,12 +41,128 @@
                 Senha:
             </td>
             <td>
-                <input type="password"> <br>
+                <input name="senha" type="password" placeholder="Senha"> <br> <!-- type="password" define um campo para entrada de senha -->
             </td>
         </tr>
         <tr>
             <td>
-                <button>Enviar</button>
+                Idade:
+            </td>
+            <td>
+                <input name="idade" type="number" min="0" max="150"> <br> <!-- type="number" define um campo para entrada valores numericos -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Horário de registro: 
+            </td>
+            <td>
+                <input name="h_reg" type="time" value="15:00" disabled> <!-- type="time" define um campo para entrada de hora:minuto -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Data de nascimento:
+            </td>
+            <td>
+                <input name="data_nasc" type="date" name="" id="" min="2023-06-26" max="2023-07-26"> <br> <!-- type="date" define um campo para entrada de data -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Telefone:
+            </td>
+            <td>
+                <input name="tel" type="tel" placeholder="(xx) x xxxx-xxxx"> <br> <!-- type="tel" define um campo para entrada de telefone -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                RG:
+            </td>
+            <td>
+                <input name="rg" type="file" accept=".html" multiple> <!-- type="file" define um campo para entrada de arquivos -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                URL da Foto: 
+            </td>
+            
+            <td>
+                <input type="url" name="foto"> <br> <!-- type="url" define um campo para entrada de endereços de internet (url) -->
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Cor: 
+            </td>
+            <td>
+                <input name="cor" type="color" value="#123456"> <!-- type="color" define um campo para entrada de valor hexadeciamal de uma cor -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Estado Civil: 
+            </td>
+            <td>
+                Solteiro: <input value="solteiro" type="radio" name="est_civ" checked> | Casado: <input value="casado" type="radio" name="est_civ"> <!-- type="radio" define um campo de opção -->
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Nível de Inglês:
+            </td>
+            <td>
+                1 <input type="range" min="1" max="5" step="1" name="nivel_ing"> 5 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Estado: 
+            </td>
+            <td>
+                <select name="estado" id=""> <!-- <select> define um campo de seleção -->
+                    <option selected disabled value="null">--Selecione uma opcão--</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="es">Espirio Santo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Fale um pouco sobre você: 
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="" id="" cols="30" rows="3" placeholder="Digite aqui."></textarea> 
+                <!-- <textarea> = define um campo para entrada de texto longo -->
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                Aceito os Termos de uso: <input type="checkbox"> <!-- type="checkbox" define uma campo marcável -->
+            </td>
+        </tr>
+
+        <!-- button = Botão Comum (auxilia na execução de um evento javascript)-->
+        <!-- submit = Submete as informações do formulário -->
+        <!-- reset = Limpar as informações do formulário -->
+        
+        <tr>
+            <td colspan="2">
+                <button type="button"> Não faz nada </button>
+                <button type="reset"> Limpar </button>
+                <button type="submit"> Enviar </button>
+                <br>
+                <input type="button" value="Não faz nada">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
             </td>
         </tr>
     </table>
